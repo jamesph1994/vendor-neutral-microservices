@@ -47,6 +47,4 @@ The Library Microservice is part of a microservices “container” application 
 
 - Test in your browser:
  
-
-
-
+	![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/home-page.png)
