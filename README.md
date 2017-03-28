@@ -35,13 +35,15 @@ The Library Microservice is part of a microservices “container” application 
 - Install the application’s node modules:
 
 	```
-		{ node-api-container } master » npm install
+	{ node-api-container } master » npm install
 	```
 
 - Start the app:
 
-	```{ node-api-container } master » node app.js
-	Example app listening on port 8080!```
+	```
+	{ node-api-container } master » node app.js
+	Example app listening on port 8080!
+	```
 
 - Test in your browser:
  
