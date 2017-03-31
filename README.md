@@ -53,16 +53,16 @@ The Library Microservice is part of a microservices “container” application 
 
 - In either a new or existing Developer Cloud Service project, select Administration > Repositories
 - Create a **New External Repository** and set the URL to **https://github.com/{your-github-id}/node-api-container.git**. Optionally set the Description to something like ** A generic Node Express container application for creating APIs to be used in demonstrations.**
-	![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/new-resitory.png)
+	![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/new-repository.PNG)
 - Create a New free-style Build Job named **Node API Container**
- 	![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/new-job.png)
+ 	![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/new-job.PNG)
 	- Under **Source Control**, select the node-api-container repository:
- 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/source-control.png)
+ 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/source-control.PNG)
 	- Under **Triggers** select Based on SCM polling schedule:
-		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/triggers.png)
+		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/triggers.PNG)
 	- Under **Build Steps** add an Execute shell Build Step and set the Command to **npm install**
-		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/build-steps.png)	
+		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/build-steps.PNG)	
 	- Under **Post Build**, select Archive the Artifacts and set the Files to Archive to ***.zip**
-		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/post-build.png)	
+		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/post-build.PNG)	
 	- **Save** and click **Build Now** to validate the build configuration
- 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/build-history.png)	
+ 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/build-history.PNG)	
