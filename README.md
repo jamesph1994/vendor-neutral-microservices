@@ -57,12 +57,12 @@ The Library Microservice is part of a microservices “container” application 
 - Create a New free-style Build Job named **Node API Container**
  	![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/new-job.png)
 	- Under **Source Control**, select the node-api-container repository:
- 		![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/source-control.png)
+ 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/source-control.png)
 	- Under **Triggers** select Based on SCM polling schedule:
-		![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/triggers.png)
+		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/triggers.png)
 	- Under **Build Steps** add an Execute shell Build Step and set the Command to **npm install**
-		![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/build-steps.png)	
+		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/build-steps.png)	
 	- Under **Post Build**, select Archive the Artifacts and set the Files to Archive to ***.zip**
-		![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/post-build.png)	
+		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/post-build.png)	
 	- **Save** and click **Build Now** to validate the build configuration
- 		![](https://github.com/OracleNATD/vendor-neutral-microservices/blob/master/images/build-history.png)	
+ 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/build-history.png)	
