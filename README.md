@@ -151,7 +151,7 @@ In this step [Apiary](https://apiary.io) is used to document the API. Apiary sup
 
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/create-api.PNG)
 
-- Copy and Paste the Library API Blueprint into your new Library API (replacing the sample Polls API) and Save:
+- Copy and Paste the [Library API Blueprint](https://github.com/OracleNATD/api-platform-sample-instructional/blob/master/apiary.apib) into your new Library API (replacing the sample Polls API) and Save:
 
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/apiary-editor.PNG)
 
