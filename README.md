@@ -105,7 +105,7 @@ The Library Microservice is part of a microservices “container” application 
 - Validate that the commit triggers a build and successful deploy.
 
 ### Orchestrate the Library Microservice
-This next step uses Integration Cloud Service (ICS) to automatically resubmit the request, instructing the service to relax its search requirements by adding a query parameter to the service call. For example:
+This next step uses Oracle [Integration](https://cloud.oracle.com/en_US/integration) Cloud Service (ICS) to automatically resubmit the request, instructing the service to relax its search requirements by adding a query parameter to the service call. For example:
 
 [https://nodeapicontainer-gse00001975.apaas.em2.oraclecloud.com/instructional/instructors/disciplines/math](https://nodeapicontainer-gse00001975.apaas.em2.oraclecloud.com/instructional/instructors/disciplines/math)
 
@@ -141,6 +141,40 @@ returns records. ICS will be used to resumbit the request with **relax=true** if
 - When Activation is complete, grab the Endpoint URL from the Integration's information icon. We'll need this for the next step:
 
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/endpoint-url.PNG)
+
+
+### Manage and Publish the Library API
+In this next step we will use the Oracle [API Platform](https://cloud.oracle.com/en_US/api-platform) Cloud Service to manage, publish and monitor the API.
+
+#### Create an API
+
+- Create a new API called **Library**
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/create-api.PNG)
+
+- Set the Backend Service URL to the ICS URL we saved from the previous step, excluding the metadata path element at the end:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/backend-service-url.PNG)
+
+- Set the API Endpoint URL to **library**
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/api-endpoint-url.PNG)
+
+- Apply an API Rate Limiting Policy of **3** per **Minute**:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/rate-limiting-policy.PNG)
+
+#### Deploy the API
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/deploy-api.PNG)
+
+- 
+
+
+
+
+
+
 
 
 
