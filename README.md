@@ -104,3 +104,44 @@ The Library Microservice is part of a microservices “container” application 
 
 - Validate that the commit triggers a build and successful deploy.
 
+### Orchestrate the Library Microservice
+This next step uses Integration Cloud Service (ICS) to automatically resubmit the request, instructing the service to relax its search requirements by adding a query parameter to the service call. For example:
+
+[https://nodeapicontainer-gse00001975.apaas.em2.oraclecloud.com/instructional/instructors/disciplines/math](https://nodeapicontainer-gse00001975.apaas.em2.oraclecloud.com/instructional/instructors/disciplines/math)
+
+returns 0 records. However, 
+
+[https://nodeapicontainer-gse00001975.apaas.em2.oraclecloud.com/instructional/instructors/disciplines/math?relax=true
+](https://nodeapicontainer-gse00001975.apaas.em2.oraclecloud.com/instructional/instructors/disciplines/math?relax=true)
+
+returns records. ICS will be used to resumbit the request with **relax=true** if recordsFound=0.
+
+- Import the Search Library Integration ([SEARCH_LIBRARY_04.00.0000.iar into ICS](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/resources/SEARCH_LIBRARY_04.00.0000.iar)).
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/import-integration.PNG)
+
+- Along with the Search Library Integration, the Inbound REST and Mock eCommerce Server Connections were also imported:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/connections.PNG)
+
+- The Connection URL of the Mock eCommerce Service needs to be set the the DNS name of your application container cloud service. For example:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/connection-properties.PNG)
+
+- Test and Save your integration. Select Yes on the Warning that appears:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/ics-warning.PNG)
+
+- Likewise, open the Inbound REST Connection and select Test and Save. 
+
+- Activate the Integration and Enable tracing:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/activate-integration.PNG)
+
+- When Activation is complete, grab the Endpoint URL from the Integration's information icon. We'll need this for the next step:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/endpoint-url.PNG)
+
+
+
+
