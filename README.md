@@ -76,4 +76,31 @@ The Library Microservice is part of a microservices “container” application 
 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/post-build.PNG)	
 	- **Save** and click **Build Now** to validate the build configuration:
 	
- 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/build-history.PNG)	
+ 		![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/build-history.PNG)
+
+#### Set up Continuous Deployment
+	
+- Create a new Deployment Configuration named **NodeAPIContainer**
+
+- Create a new Application Container Cloud Deployment Target:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/deployment-target.PNG)
+
+- Set the remaining Deployment Configuration properties:
+	- ACCS Properties: **Node**
+	- Type: Automatic, selecting to **Deploy stable builds only**
+	- Job: **Node API Container**
+	- Artifact: **node-api-container.zip**
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/deployment-configuration.PNG)
+
+#### Validate
+
+- On your local workstation, make a change to the node-api-container source. I like to change the payload in instructionalRouter.js.
+
+- Commit and Push the change. You can do this from Eclipse, NetBeans, [SoruceTree](https://www.sourcetreeapp.com/), etc. I prefer to use the command line:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/git-commit.PNG)
+
+- Validate that the commit triggers a build and successful deploy.
+
