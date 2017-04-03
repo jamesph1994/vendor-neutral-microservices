@@ -8,6 +8,7 @@ You have the following cloud accounts:
 - Oracle [Application Container](https://cloud.oracle.com/en_US/application-container-cloud) Cloud Service
 - Oracle [Integration](https://cloud.oracle.com/en_US/integration) Cloud Service
 - Oracle [API Platform](https://cloud.oracle.com/en_US/api-platform) Cloud Service
+- [Apiary](https://apiary.io/plans) Pro Account
 - [Google Cloud](https://cloud.google.com) Account
 - A [GitHub](https://github.com/) account.
 - You have [Git](https://git-scm.com/) installed.
@@ -143,6 +144,18 @@ returns records. ICS will be used to resumbit the request with **relax=true** if
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/endpoint-url.PNG)
 
 
+### Document the API
+In this step [Apiary](https://apiary.io) is used to document the API. Apiary supports both [Swagger](http://swagger.io/) and [API Blueprint](https://apiblueprint.org/). The Library API has been documented using API Blueprint (a nice exercise would be also document the API using Swagger).
+
+- Create a New API Blueprint API called **Library**:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/create-api.PNG)
+
+- Copy and Paste the Library API Blueprint into your new Library API (replacing the sample Polls API) and Save:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/apiary-editor.PNG)
+
+
 ### Manage and Publish the Library API
 In this next step we will use the Oracle [API Platform](https://cloud.oracle.com/en_US/api-platform) Cloud Service to manage, publish and monitor the API.
 
@@ -168,7 +181,9 @@ In this next step we will use the Oracle [API Platform](https://cloud.oracle.com
 
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/deploy-api.PNG)
 
-- 
+#### Publish the API
+
+
 
 
 
