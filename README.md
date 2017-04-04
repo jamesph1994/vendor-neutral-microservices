@@ -178,12 +178,33 @@ In this next step we will use the Oracle [API Platform](https://cloud.oracle.com
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/rate-limiting-policy.PNG)
 
 #### Deploy the API
+In this step the API is deployed to a gateway.
 
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/deploy-api.PNG)
 
-#### Publish the API
+#### Publish the API 
+In this step the API is published to the Developer Portal.
 
+- In the API's Publication tab, name the portal **Library**
 
+- For the Developer Portal API Overview, select **HTML** and then **Link**. Set the link to: https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/resources/htmloverview.html.
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/developer-portal-api-overview.PNG)
+
+- For Documentation, click the Apiary button, log in and select the Library API:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/select-api-project.PNG)
+
+- Save you Changes and click **Publish to Portal**
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/publish-to-portal.PNG)
+
+#### Grant Application Registration Rights
+In this step you grant the app-dev-user rights to register applications against this API.
+
+- Switch to the **Grants** tab, select the **Register** tab and click **Add Grantee**. Select a user with an ApplicationDeveloper role:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/add-grantee.PNG)
 
 
 
