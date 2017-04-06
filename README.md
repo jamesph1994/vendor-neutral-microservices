@@ -173,6 +173,10 @@ In this next step we will use the Oracle [API Platform](https://cloud.oracle.com
 
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/api-endpoint-url.PNG)
 
+- Apply a Service Level Auth policy to log us into ICS:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/service-level-auth-policy.PNG)
+
 - Apply an API Rate Limiting Policy of **3** per **Minute**:
 
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/rate-limiting-policy.PNG)
@@ -206,7 +210,36 @@ In this step you grant the app-dev-user rights to register applications against 
 
 	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/add-grantee.PNG)
 
+### Consume the API
+Finally we have the front-end [Oracle JET](http://www.oracle.com/webfolder/technetwork/jet/index.html) application which consumes the API (and does a bunch of other stuff).
 
+- Fork the [https://github.com/OracleNATD/OracleJETQuickStart.git](https://github.com/OracleNATD/OracleJETQuickStart.git) to your GitHub account.
+- Clone the https://github.com/{your-github-id}/OracleJETQuickStart to your local workstation
+- Install the application’s node modules. 
+- Open [doc_root\js\viewModels\library.js
+](https://github.com/OracleNATD/OracleJETQuickStart/blob/master/doc_root/js/viewModels/library.js) in your favorite editor.
+- Update the root variable to point to the address and port of your API Platform gateway load balancer. 
+- Start the application:
+	```	
+	{ OracleJETQuickStart } master » node server.js
+	listening on port 8085
+	```
+- Launch the application from your browser ([http://localhost:8085/?root=library](http://localhost:8085/?root=library)) and search for **Astronomy**:
+ 
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/jet-astronomy.PNG)
+
+- Search for anything else, and ICS will ensure results are still returned:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/jet-other.PNG)
+
+- Search more than 3 times a minute and the API Platform will stop you in your tracks:
+
+	![](https://raw.githubusercontent.com/OracleNATD/vendor-neutral-microservices/master/images/jet-rate-limit.PNG)
+
+
+
+
+ 
 
 
 
