@@ -2,6 +2,9 @@
 
 This script demonstrated how a microservice can be developed using [Twelve-Factor](https://12factor.net/) principals, integrated using Oracle Integration Cloud Service and protected using the Oracle API Platform.
 
+	![](/images/overview.PNG)
+
+
 ## Pre-requisites ##
 You have the following cloud accounts:
 
