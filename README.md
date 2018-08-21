@@ -40,16 +40,22 @@ The Library Microservice is part of a microservices “container” application 
 	
 	![](/images/github-fork.png)
 	
+- In the command line change driectory to the recently cloned gitfolder using the 'cd' command:
+
+	```
+	 C:\Users\jahargre> cd /node-api-container/
+	```	
+	
 - Install the application’s node modules:
 
 	```
-	{ node-api-container } master » npm install
+	{ node-api-container } » npm install
 	```
 
 - Start the app:
 
 	```
-	{ node-api-container } master » node app.js
+	{ node-api-container } » node app.js
 	Example app listening on port 8080!
 	```
 
