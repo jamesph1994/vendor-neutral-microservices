@@ -36,7 +36,9 @@ The Library Microservice is part of a microservices “container” application 
 	```
 	or
 	
-	![](/images/github-fork.PNG)
+	On the github website click the 'Clone or Download' button and open in your desktop.
+	
+	![](/images/github-fork.png)
 	
 - Install the application’s node modules:
 
