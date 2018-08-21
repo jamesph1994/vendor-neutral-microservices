@@ -12,7 +12,6 @@ You have the following cloud accounts:
 - Oracle [Integration](https://cloud.oracle.com/en_US/integration) Cloud Service
 - Oracle [API Platform](https://cloud.oracle.com/en_US/api-platform) Cloud Service
 - [Apiary](https://apiary.io/plans) Pro Account
-- [Google Cloud](https://cloud.google.com) Account
 - A [GitHub](https://github.com/) account.
 - You have [Git](https://git-scm.com/) installed.
 - You have [Node.js](https://nodejs.org/) installed.
@@ -35,7 +34,10 @@ The Library Microservice is part of a microservices “container” application 
 	Resolving deltas: 100% (197/197), done.
 	Checking connectivity... done.
 	```
-
+	or
+	
+	![](/images/github-fork.PNG)
+	
 - Install the application’s node modules:
 
 	```
