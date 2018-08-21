@@ -40,10 +40,10 @@ The Library Microservice is part of a microservices “container” application 
 	
 	![](/images/github-fork.png)
 	
-- In the command line change driectory to the recently cloned gitfolder using the 'cd' command:
+- In the command line change the directory to the recently cloned gitfolder using the 'cd' command:
 
 	```
-	 C:\Users\jahargre> cd /node-api-container/
+	C:\Users> cd /node-api-container/
 	```	
 	
 - Install the application’s node modules:
